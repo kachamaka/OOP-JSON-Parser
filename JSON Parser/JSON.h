@@ -23,7 +23,7 @@ public:
 	JSON(const JSON&) = delete;
 	JSON& operator=(const JSON&) = delete;
 
-	void construct(const String& raw);
+	void construct(const String& raw = "{}");
 
 	void print(bool prettyPrint = true) const;
 	void save(const String& path, bool prettyPrint = true) const;

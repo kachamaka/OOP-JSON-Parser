@@ -34,7 +34,7 @@ public:
 	void save(bool prettyPrint = true);
 	void saveas(const String& path, bool prettyPrint = true);
 	void print(bool prettyPrint = true);
-	void validate();
+	//void validate();
 
 	//search cmds
 	void search(const String& key) const;

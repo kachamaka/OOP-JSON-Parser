@@ -62,7 +62,7 @@ void JSONParser::open(const String& path) {
 void JSONParser::newFile() {
 	json.clear();
 	jsonRawData.clear();
-	json.construct("{}");
+	json.construct();
 	loaded = true;
 	std::cout << "New file created!\n";
 }
@@ -122,18 +122,18 @@ void JSONParser::print(bool prettyPrint) {
 	json.print(prettyPrint);
 }
 
-void JSONParser::validate() {
-	checkLoaded();
-
-	try {
-		jsonRawData.validate();
-	}
-	catch (...) {
-		clearData();
-		throw;
-	}
-	//std::cout << "Valid JSON!\n";
-}
+//void JSONParser::validate() {
+//	checkLoaded();
+//
+//	try {
+//		jsonRawData.validate();
+//	}
+//	catch (...) {
+//		clearData();
+//		throw;
+//	}
+//	//std::cout << "Valid JSON!\n";
+//}
 
 void JSONParser::search(const String& key) const {
 	checkLoaded();
@@ -144,7 +144,6 @@ void JSONParser::search(const String& key) const {
 	else {
 		std::cout << "Keys found!\n";
 	}
-	
 }
 
 void JSONParser::printSearch() const {
