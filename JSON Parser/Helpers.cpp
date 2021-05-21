@@ -1,6 +1,6 @@
-#include <regex>
-
 #include "Helpers.h"
+
+#include <regex>
 
 const std::regex intRegex("[-]?[1-9][0-9]*|0");
 const std::regex doubleRegex("[-]?[0-9]+.[0-9]+([eE][-]?[0-9]+)?");

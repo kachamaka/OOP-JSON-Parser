@@ -1,5 +1,6 @@
-#include "Exceptions.h"
 #include "SearchCommand.h"
+
+#include "Exceptions.h"
 #include "JSONParser.h"
 
 void SearchCommand::exec(const Vector<Pair<ValueType, String>> arguments) {

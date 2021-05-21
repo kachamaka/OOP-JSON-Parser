@@ -1,5 +1,5 @@
-#include "Exceptions.h"
 #include "CreateCommand.h"
+#include "Exceptions.h"
 #include "JSONParser.h"
 
 void CreateCommand::exec(const Vector<Pair<ValueType, String>> arguments) {

@@ -1,12 +1,11 @@
-#include <fstream>
-
-#include <iostream>
-
-#include "Helpers.h"
 #include "JSONParser.h"
 
-#include "JSONSearch.h"
+#include <iostream>
+#include <fstream>
+
+#include "Helpers.h"
 #include "JSON.h"
+#include "JSONSearch.h"
 
 JSON& json = JSON::Get();
 JSONSearch& jsonSearch = JSONSearch::Get();

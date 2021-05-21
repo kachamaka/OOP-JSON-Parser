@@ -1,9 +1,5 @@
 #pragma once
 
-#include <cstddef>
-#include <vector>
-#include <string>
-
 #include "JSONProperty.h"
 
 class JSONSearch {

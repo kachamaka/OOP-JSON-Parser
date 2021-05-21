@@ -1,5 +1,6 @@
-#include "Exceptions.h"
 #include "SetCommand.h"
+
+#include "Exceptions.h"
 #include "JSONParser.h"
 
 void SetCommand::exec(const Vector<Pair<ValueType, String>> arguments) {

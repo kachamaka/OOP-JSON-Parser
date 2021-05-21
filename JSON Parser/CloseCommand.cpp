@@ -1,4 +1,3 @@
-#include "Exceptions.h"
 #include "CloseCommand.h"
 #include "JSONParser.h"
 

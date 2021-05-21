@@ -1,8 +1,7 @@
 #pragma once
 
-#include "JSONSearch.h"
-#include "JSONStructure.h"
 #include "Helpers.h"
+#include "JSONStructure.h"
 
 class JSONParser {
 	JSONStructure jsonRawData;

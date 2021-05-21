@@ -1,5 +1,5 @@
-#include "Exceptions.h"
 #include "NewCommand.h"
+
 #include "JSONParser.h"
 
 void NewCommand::exec() {

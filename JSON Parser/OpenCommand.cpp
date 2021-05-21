@@ -1,5 +1,6 @@
-#include "Exceptions.h"
 #include "OpenCommand.h"
+
+#include "Exceptions.h"
 #include "JSONParser.h"
 
 void OpenCommand::exec(const Vector<Pair<ValueType, String>> arguments) {

@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-
 #include "Helpers.h"
 
 class JSONStructure {

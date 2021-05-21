@@ -1,9 +1,8 @@
-#include <stdexcept>
+#include "JSON.h"
+
 #include <iostream>
 #include <fstream>
-#include <vector>
 
-#include "JSON.h"
 #include "Helpers.h"
 #include "Exceptions.h"
 #include "JSONStructure.h"

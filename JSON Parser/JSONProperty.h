@@ -1,10 +1,7 @@
 #pragma once
 
-#include <string>
-
-#include "JSONObject.h"
 #include "Helpers.h"
-
+#include "JSONObject.h"
 
 class JSONProperty {
 	String key;

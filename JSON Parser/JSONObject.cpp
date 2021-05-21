@@ -1,8 +1,9 @@
-#include <stdexcept>
+#include "JSONObject.h"
+
 #include <iostream>
+#include <stdexcept>
 
 #include "Helpers.h"
-#include "JSONObject.h"
 #include "JSONProperty.h"
 
 Size_T JSONObject::getClosingCharPos(const String& raw, Size_T startPos, char openChar, char closeChar) {

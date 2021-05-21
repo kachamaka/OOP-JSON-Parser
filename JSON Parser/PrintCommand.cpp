@@ -1,5 +1,6 @@
-#include "Exceptions.h"
 #include "PrintCommand.h"
+
+#include "Exceptions.h"
 #include "JSONParser.h"
 
 void PrintCommand::exec(const Vector<Pair<ValueType, String>> arguments) {

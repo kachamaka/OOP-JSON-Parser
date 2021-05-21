@@ -1,5 +1,6 @@
-#include "Exceptions.h"
 #include "MoveCommand.h"
+
+#include "Exceptions.h"
 #include "JSONParser.h"
 
 void MoveCommand::exec(const Vector<Pair<ValueType, String>> arguments) {

@@ -1,7 +1,6 @@
-#include <iostream>
-
-#include "Helpers.h"
 #include "JSONProperty.h"
+
+#include <iostream>
 
 JSONProperty::JSONProperty(String key, String value): key(key), value(value) {
 	if (isJSONString(value)) {

@@ -1,11 +1,9 @@
-#include <cstddef>
+#include "CommandParser.h"
+
 #include <iostream>
-#include <stdexcept>
 
 #include "Helpers.h"
 #include "Exceptions.h"
-
-#include "CommandParser.h"
 
 #include "OpenCommand.h"
 #include "CloseCommand.h"

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 
-#include "Helpers.h"
 #include "JSONStructure.h"
 
 JSONStructure::JSONStructure(const String& raw) {
