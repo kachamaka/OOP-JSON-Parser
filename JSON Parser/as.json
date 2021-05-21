@@ -1,15 +1,17 @@
 {
-  "ID": 42,
-  "version": 1,
+  "ID": {
+    "ivan": "peta}r",
+    "go6o": 42,
+    "test": {}
+  },
+  "version": 42,
   "test:key with some:keys": false,
   "value": 8,
   "new \"key\" for project": {
     "ivan": ":projects",
     "myArr": [
       "daebawe",
-      {
-        "testProp": 42
-      },
+      "daebawe",
       "temerut4o",
       42,
       {
@@ -44,12 +46,8 @@
   "defaultProject": "friartux-queue",
   "a": {
     "b": {
-      "c": [
-        1,
-        2,
-        3
-      ]
+      "c": "ivan"
     }
   },
-  "pesho": "daipari"
+  "pesho": {"da":"da"}
 }

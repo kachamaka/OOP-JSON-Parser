@@ -81,3 +81,8 @@ ValueType JSONProperty::getAssociatedType() {
 JSONObject* JSONProperty::getChild() const {
 	return childPtr;
 }
+
+void JSONProperty::deleteChild() {
+	delete childPtr;
+	childPtr = nullptr;
+}

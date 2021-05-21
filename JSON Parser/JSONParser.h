@@ -14,6 +14,7 @@ class JSONParser {
 	bool saved = false;
 
 	JSONParser() {};
+	~JSONParser() {};
 
 	void checkLoaded() const;
 	void clearData();
@@ -51,4 +52,7 @@ public:
 
 	//remove cmd
 	void remove(const String& key);
+
+	//move cmd
+	void move(const String& key1, const String& key2);
 };

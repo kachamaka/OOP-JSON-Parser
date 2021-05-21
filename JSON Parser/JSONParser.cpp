@@ -190,3 +190,10 @@ void JSONParser::remove(const String& key) {
 	changes = true;
 	std::cout << "Property removed successfully!\n";
 }
+
+void JSONParser::move(const String& key1, const String& key2) {
+	checkLoaded();
+	json.move(key1, key2);
+	changes = true;
+	std::cout << "Property moved successfully!\n";
+}

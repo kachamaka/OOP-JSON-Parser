@@ -66,12 +66,17 @@ void JSONStructure::validateKeyValue(Size_T start, Size_T end, bool objectValue)
 	if (objectValue) {
 		String keyWithValue = rawData.substr(start, end - start);
 		Size_T middle = getColonPos(keyWithValue);
-		String key = keyWithValue.substr(0, middle);
-		String value = keyWithValue.substr(middle + 1);
-		//std::cout << key << " " << value << "\n";
+		if (middle == String::npos) {
+			validateValue(keyWithValue);
+		}
+		else {
+			String key = keyWithValue.substr(0, middle);
+			String value = keyWithValue.substr(middle + 1);
+			//std::cout << key << " " << value << "\n";
 
-		validateValue(value);
-		validateKey(key);
+			validateValue(value);
+			validateKey(key);
+		}
 	}
 	else {
 		String value = rawData.substr(start, end - start);
@@ -96,6 +101,8 @@ Size_T JSONStructure::validateJSON(
 			inQuotes = !inQuotes;
 		}
 		if (!inQuotes) {
+
+
 			if (rawData[i] == ',') {
 				if (rawData[i + 1] == ',') {
 					String errorMsg = "Invalid JSON: Invalid property near: ";
@@ -112,7 +119,6 @@ Size_T JSONStructure::validateJSON(
 				}
 				else {
 					//invalid
-					//std::cout << "INVALID!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n";
 					String errorMsg = "Invalid JSON: Error near: ";
 					errorMsg += rawData.substr(start, i + 1 - start);
 					throw std::invalid_argument(errorMsg);

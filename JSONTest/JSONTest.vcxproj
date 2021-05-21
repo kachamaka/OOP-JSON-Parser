@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{1c0abe8f-f05b-4d22-a6be-e2321ad8bde2}</ProjectGuid>
-    <RootNamespace>JSONParser</RootNamespace>
+    <ProjectGuid>{277f8c01-39c2-42cf-97ed-8ad7c4d6c35b}</ProjectGuid>
+    <RootNamespace>JSONTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -72,8 +72,6 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Program Files (x86)\Visual Leak Detector\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files (x86)\Visual Leak Detector\lib\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -141,51 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CloseCommand.cpp" />
-    <ClCompile Include="Core.cpp" />
-    <ClCompile Include="CreateCommand.cpp" />
-    <ClCompile Include="Helpers.cpp" />
-    <ClCompile Include="JSON.cpp" />
-    <ClCompile Include="JSONObject.cpp" />
-    <ClCompile Include="JSONProperty.cpp" />
-    <ClCompile Include="JSONSearch.cpp" />
-    <ClCompile Include="JSONStructure.cpp" />
-    <ClCompile Include="JSONParser.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="CommandParser.cpp" />
-    <ClCompile Include="MoveCommand.cpp" />
-    <ClCompile Include="NewCommand.cpp" />
-    <ClCompile Include="OpenCommand.cpp" />
-    <ClCompile Include="PrintCommand.cpp" />
-    <ClCompile Include="RemoveCommand.cpp" />
-    <ClCompile Include="SaveAsCommand.cpp" />
-    <ClCompile Include="SaveCommand.cpp" />
-    <ClCompile Include="SearchCommand.cpp" />
-    <ClCompile Include="SetCommand.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CloseCommand.h" />
-    <ClInclude Include="Command.h" />
-    <ClInclude Include="Core.h" />
-    <ClInclude Include="CommandParser.h" />
-    <ClInclude Include="CreateCommand.h" />
-    <ClInclude Include="Exceptions.h" />
-    <ClInclude Include="JSON.h" />
-    <ClInclude Include="JSONObject.h" />
-    <ClInclude Include="JSONProperty.h" />
-    <ClInclude Include="JSONSearch.h" />
-    <ClInclude Include="JSONStructure.h" />
-    <ClInclude Include="JSONParser.h" />
-    <ClInclude Include="Helpers.h" />
-    <ClInclude Include="MoveCommand.h" />
-    <ClInclude Include="NewCommand.h" />
-    <ClInclude Include="OpenCommand.h" />
-    <ClInclude Include="PrintCommand.h" />
-    <ClInclude Include="RemoveCommand.h" />
-    <ClInclude Include="SaveAsCommand.h" />
-    <ClInclude Include="SaveCommand.h" />
-    <ClInclude Include="SearchCommand.h" />
-    <ClInclude Include="SetCommand.h" />
+    <ClCompile Include="..\JSON Parser\Helpers.cpp" />
+    <ClCompile Include="..\JSON Parser\JSON.cpp" />
+    <ClCompile Include="..\JSON Parser\JSONObject.cpp" />
+    <ClCompile Include="..\JSON Parser\JSONProperty.cpp" />
+    <ClCompile Include="..\JSON Parser\JSONSearch.cpp" />
+    <ClCompile Include="..\JSON Parser\JSONStructure.cpp" />
+    <ClCompile Include="JSONTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

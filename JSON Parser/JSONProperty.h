@@ -25,10 +25,11 @@ public:
 	String getPropertyString() const;
 
 	void setParrent(JSONObject*);
-	void setChild(JSONObject*);
 
-	//void setAssociatedType(Type t);
+	void setChild(JSONObject*);
+	JSONObject* getChild() const;
+	void deleteChild();
+
 	ValueType getAssociatedType();
 
-	JSONObject* getChild() const;
 };

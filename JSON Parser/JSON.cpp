@@ -83,7 +83,7 @@ void JSON::set(const String& key, Pair<ValueType, String> value) const {
 			JSONObject* newObj = new JSONObject(value.second);
 			currentProp->setValue("");
 			if (currentProp->getChild() != nullptr) {
-				delete currentProp->getChild();
+				currentProp->deleteChild();
 			}
 			currentProp->setChild(newObj);
 		}
@@ -120,6 +120,29 @@ void JSON::remove(const String& key) const {
 	}
 	else {
 		currentObj->removeProperty(currentProp);
+	}
+}
+
+void JSON::move(const String& key1, const String& key2) const {
+
+	Vector<Pair<String, String>> keys1;
+	parseKeys(key1, keys1);
+	JSONObject* obj1 = jsonObj;
+	JSONProperty* prop1 = nullptr;
+	getPropertyFromKeyPath(keys1, prop1, obj1);
+
+
+	Vector<Pair<String, String>> keys2;
+	parseKeys(key2, keys2);
+	JSONObject* obj2 = jsonObj;
+	JSONProperty* prop2 = nullptr;
+	getPropertyFromKeyPath(keys2, prop2, obj2);
+
+	if (prop1 == nullptr || prop2 == nullptr) {
+		throw invalidPathToKey;
+	}
+	else {
+		moveProperty(prop1, prop2);
 	}
 }
 
@@ -345,6 +368,35 @@ void JSON::createProperty(const Vector<Pair<String, String>>& keys, const Pair<V
 				currentObj = newObj;
 			}
 
+		}
+	}
+}
+
+void JSON::moveProperty(JSONProperty*& prop1, JSONProperty*& prop2) {
+	if (prop2->getChild() != nullptr) {
+		if (prop1->getChild() != nullptr) {
+			prop2->getChild()->clear();
+			prop2->deleteChild();
+
+			JSONObject* newChild = new JSONObject(prop1->getChild()->getObjectString());
+			prop2->setChild(newChild);
+		}
+		else {
+			prop2->getChild()->clear();
+			prop2->deleteChild();
+
+			prop2->setValue(prop1->getValue());
+		}
+	}
+	else {
+		if (prop1->getChild() != nullptr) {
+			prop2->setValue("");
+
+			JSONObject* newChild = new JSONObject(prop1->getChild()->getObjectString());
+			prop2->setChild(newChild);
+		}
+		else {
+			prop2->setValue(prop1->getValue());
 		}
 	}
 }

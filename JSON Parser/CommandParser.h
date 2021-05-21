@@ -11,7 +11,6 @@ class CommandParser {
 	std::vector<Pair<ValueType, String>> arguments;
 
 	void addArgument(String arg);
-	
 
 	void executeCommand();
 
@@ -24,9 +23,8 @@ class CommandParser {
 protected:
 	bool exit = false;
 	static void transformPath(String& s);
-
 public:
-	void parse(String cmd);
+	void parse(String line);
 	void resetConsole();
 	bool isExit() const;
 };

@@ -14,6 +14,7 @@ class JSON {
 	static void parseKeys(const String& key, Vector<Pair<String, String>>& keys);
 	static void getPropertyFromKeyPath(const Vector<Pair<String, String>>& keys, JSONProperty*& currentProp, JSONObject*& currentObj);
 	static void createProperty(const Vector<Pair<String, String>>& keys, const Pair<ValueType, String>& value, JSONObject*& currentObj);
+	static void moveProperty(JSONProperty*& prop1, JSONProperty*& prop2);
 public:
 	static JSON& Get() {
 		static JSON json_instance;
@@ -30,11 +31,10 @@ public:
 	void set(const String& key, Pair<ValueType, String> value) const;
 	void create(const String& key, Pair<ValueType, String> value) const;
 	void remove(const String& key) const;
+	void move(const String& key1, const String& key2) const;
 
 	void clear();
 
 	JSONObject* getJSON() const;
 
 };
-
-//JSON& json = JSON::Get();

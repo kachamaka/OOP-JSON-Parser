@@ -17,6 +17,7 @@
 #include "SetCommand.h"
 #include "CreateCommand.h"
 #include "RemoveCommand.h"
+#include "MoveCommand.h"
 
 
 void CommandParser::parse(String line) {
@@ -99,7 +100,8 @@ void CommandParser::executeCommand() {
 		set.exec(arguments);
 	}
 	else if (command == "move") {
-		
+		MoveCommand move;
+		move.exec(arguments);
 	}
 	else if (command == "remove") {
 		RemoveCommand remove;
