@@ -1,0 +1,54 @@
+{
+  "ID": "042",
+  "version": 1,
+  "test:key with some:keys": false,
+  "value": 8,
+  "new \"key\" for project": ":projects",
+  "projects": {
+    "test": "petar",
+    "test3": [
+      "petar",
+      "ivan",
+      {
+        "testStr": "42"
+      },
+      42,
+      [
+        "test",
+        null
+      ],
+      [],
+      "da",
+      {}
+    ],
+    "moreTest": {
+      "ivan": "peta}r",
+      "go6o": 42,
+      "test": {}
+    },
+    "testBe": {},
+    "deadline": "April",
+    "test2": {
+      "ivan": null
+    },
+    "test4": [
+      "ivan",
+      [
+        "petar",
+        {
+          "az": 42
+        }
+      ]
+    ],
+    "value": 99
+  },
+  "defaultProject": "friartux-queue",
+  "a": {
+    "b": {
+      "c": {
+        "d": 2
+      }
+    }
+  },
+  "val": "daeba"
+}
