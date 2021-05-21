@@ -22,6 +22,7 @@ public:
 	JSONSearch& operator=(const JSONSearch&) = delete;
 
 	String getSearchString() const;
+	String getPrettySearchString() const;
 	void search(const String& key);
 
 	void print() const;

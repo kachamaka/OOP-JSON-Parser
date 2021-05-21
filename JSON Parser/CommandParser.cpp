@@ -294,3 +294,4 @@ void CommandParser::parseArgments(const std::string& line) {
 		}
 	}
 }
+

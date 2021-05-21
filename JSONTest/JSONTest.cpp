@@ -2,6 +2,7 @@
 #include <stdexcept>
 
 #include "../JSON Parser/JSON.h"
+#include "../JSON Parser/JSONProperty.h"
 
 using TestFunction = void(*)();
 
@@ -18,8 +19,7 @@ bool runTest(TestFunction pfn, const char* name) {
 	return hasError;
 }
 
-int main()
-{
+int main() {
 
 }
 
@@ -32,7 +32,7 @@ void name()
 //test functions
 
 JSON& json = JSON::Get();
-std::string raw = "{\"testProperty\":42,\"Owner\":\"kachamaka\",\"myArr\":[],\"myObj\":{}}";
+String raw = "{\"testProperty\":42,\"Owner\":\"kachamaka\",\"myArr\":[],\"myObj\":{}}";
 
 TEST_CASE(testJSONConstruct) {
 	try {

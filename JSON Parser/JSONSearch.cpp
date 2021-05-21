@@ -28,6 +28,11 @@ String JSONSearch::getSearchString() const {
 		}
 	}
 	objStr += '}';
+	return objStr;
+}
+
+String JSONSearch::getPrettySearchString() const {
+	String objStr = getSearchString();
 	return formatPretty(objStr);
 }
 
@@ -65,7 +70,7 @@ void JSONSearch::save(const String& path) const {
 	if (!file) {
 		throw std::invalid_argument("Couldn't open file");
 	}
-	String data = getSearchString();
+	String data = getPrettySearchString();
 	file << data;
 	file.close();
 }

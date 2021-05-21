@@ -2,12 +2,14 @@
 
 #include <string>
 
+#include "Helpers.h"
+
 class JSONStructure {
 	String rawData;
 
 	String latestKey;
 
-	Size_T validateJSON(Size_T start, char openCh, char closeCh, char openAltCh, char closeAltCh);
+	Size_T validateJSON(Size_T start = 1, char openCh = '{', char closeCh = '}', char openAltCh = '[', char closeAltCh = ']');
 
 	void validateKeyValue(Size_T start, Size_T end, bool objectValue);
 

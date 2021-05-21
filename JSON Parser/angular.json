@@ -2,7 +2,7 @@
   "ID": "042",
   "version": 1,
   "test:key with some:keys": false,
-  "value":8",
+  "value":8,
   "new \"key\" for project": ":projects",
   "projects": {
 	"test": "petar",
@@ -27,4 +27,3 @@
   },
   "pesho":"daipari"
 }
-

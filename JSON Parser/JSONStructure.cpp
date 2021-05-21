@@ -30,22 +30,9 @@ void JSONStructure::print(bool prettyPrint = false) {
 	}
 }
 
-//----------------------------------------
-//void printTabs(int numOfTabs) {
-//	for (int i = 0; i < numOfTabs; i++) {
-//		std::cout << "\t";
-//	}
-//}
-//
-//void printSubstr(const String& str, Size_T start, Size_T end, int tabs) {
-//	printTabs(tabs);
-//	std::cout << str.substr(start, end - start) << "\n";
-//}
-
 void JSONStructure::validateValue(const String& value) {
 	if (!isJSONString(value)) {
 		if (!isNumber(value) && !isJSON3ValuedLogic(value)) {
-			//say where the error is
 			//std::cout << value << " -> WHAT IS DIS?\n";
 			String errorMsg = "Invalid JSON: Invalid value near: ";
 			errorMsg += value;
@@ -84,15 +71,12 @@ void JSONStructure::validateKeyValue(Size_T start, Size_T end, bool objectValue)
 	}
 }
 
-//TODO: delete comments later
-//instead printSubstr use the moment to validate json properties;
 Size_T JSONStructure::validateJSON(
-	Size_T start = 1,
-	char openCh = '{',
-	char closeCh = '}',
-	char openAltCh = '[',
-	char closeAltCh = ']') {
-	static int numOfTabs = 0;
+	Size_T start ,
+	char openCh,
+	char closeCh,
+	char openAltCh,
+	char closeAltCh) {
 	bool inQuotes = false;
 	bool objVal = openCh == '{' ? true : false;
 	Size_T end = 0;
@@ -101,7 +85,6 @@ Size_T JSONStructure::validateJSON(
 			inQuotes = !inQuotes;
 		}
 		if (!inQuotes) {
-
 
 			if (rawData[i] == ',') {
 				if (rawData[i + 1] == ',') {
@@ -113,8 +96,6 @@ Size_T JSONStructure::validateJSON(
 				end = i;
 
 				if (start < end) {
-					//printSubstr(rawData, start, end, numOfTabs);
-
 					validateKeyValue(start, end, objVal);
 				}
 				else {
@@ -129,9 +110,6 @@ Size_T JSONStructure::validateJSON(
 				if (rawData[i + 1] == closeCh) {
 					i = i + 2;
 					end = i;
-					//if (start != end) {
-					//	printSubstr(rawData, start, end, numOfTabs);
-					//}
 					start = i + 1;
 				}
 				else if (rawData[i + 1] == openCh) {
@@ -145,21 +123,10 @@ Size_T JSONStructure::validateJSON(
 
 					if (start < end) {
 						//nested object name
-						//printSubstr(rawData, start, end, numOfTabs);
 						String key = rawData.substr(start, end - start - 1);
 						validateKey(key);
 					}
-					//else {
-					//	printTabs(numOfTabs);
-					//	if (openCh == '{') {
-					//		std::cout << "Object:\n";
-					//	}
-					//	else {
-					//		std::cout << "Array:\n";
-					//	}
-					//}
 
-					numOfTabs++;
 					i = validateJSON(i + 1, openCh, closeCh, openAltCh, closeAltCh);
 					if (rawData[i + 1] == ',') {
 						i++;
@@ -182,21 +149,10 @@ Size_T JSONStructure::validateJSON(
 				end = i;
 				if (start < end) {
 					//nested object name
-					//printSubstr(rawData, start, end, numOfTabs);
 					String key = rawData.substr(start, end - start - 1);
 					validateKey(key);
 				}
-				//else {
-				//	printTabs(numOfTabs);
-				//	if (openAltCh == '{') {
-				//		std::cout << "Object:\n";
-				//	}
-				//	else {
-				//		std::cout << "Array:\n";
-				//	}
-				//}
 
-				numOfTabs++;
 				i = validateJSON(i + 1, openAltCh, closeAltCh, openCh, closeCh);
 
 				if (rawData[i + 1] == ',') {
@@ -216,16 +172,14 @@ Size_T JSONStructure::validateJSON(
 				}
 				end = i;
 				if (start < end) {
-					//printSubstr(rawData, start, end, numOfTabs);
 					validateKeyValue(start, end, objVal);
 				}
-				numOfTabs--;
 				return i;
 			}
 		}
 		else {
 			if (i == rawData.size() - 1) {
-				std::cout << rawData << "\n";
+				//std::cout << rawData << "\n";
 				String errorMsg = "Invalid JSON: No closing quotes near: ";
 				errorMsg += rawData.substr(start, i + 1 - start);
 				throw std::invalid_argument(errorMsg);

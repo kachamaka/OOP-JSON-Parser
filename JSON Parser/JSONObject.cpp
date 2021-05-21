@@ -59,9 +59,6 @@ JSONObject::JSONObject(const String& raw) {
 					String value = propName.substr(colonPos + 1);
 					JSONProperty* prop = new JSONProperty(key, value);
 
-					//maybe not neccessary
-					prop->setParrent(this);
-
 					properties.push_back(prop);
 					start = i + 1;
 				}
@@ -111,9 +108,6 @@ JSONObject::JSONObject(const String& raw) {
 						String value = propName.substr(colonPos + 1);
 						JSONProperty* prop = new JSONProperty(key, value);
 
-						//maybe not neccessary
-						prop->setParrent(this);
-
 						properties.push_back(prop);
 					}
 					start = i + 1;
@@ -141,9 +135,6 @@ JSONObject::JSONObject(const String& raw) {
 
 					JSONProperty* prop = new JSONProperty("", value);
 
-					//maybe not neccessary
-					prop->setParrent(this);
-
 					properties.push_back(prop);
 					start = i + 1;
 				}else if (raw[i] == '{') {
@@ -156,7 +147,6 @@ JSONObject::JSONObject(const String& raw) {
 					nestedObj->parrentPtr = this;
 					
 					prop->setChild(nestedObj);
-					prop->setParrent(this);
 
 					properties.push_back(prop);
 
@@ -173,7 +163,6 @@ JSONObject::JSONObject(const String& raw) {
 					nestedObj->parrentPtr = this;
 
 					prop->setChild(nestedObj);
-					prop->setParrent(this);
 
 					properties.push_back(prop);
 
@@ -185,9 +174,6 @@ JSONObject::JSONObject(const String& raw) {
 						String value = raw.substr(start, i - start);
 
 						JSONProperty* prop = new JSONProperty("", value);
-
-						//maybe not neccessary
-						prop->setParrent(this);
 
 						properties.push_back(prop);
 					}
@@ -288,6 +274,7 @@ void JSONObject::clear() {
 		}
 		delete properties[i];
 	}
+	properties.clear();
 }
 
 JSONProperty* JSONObject::operator[](Size_T pos) {

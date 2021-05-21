@@ -24,7 +24,6 @@ void JSONParser::clearData() {
 	loaded = false;
 	loadedFile = "";
 	json.clear();
-	std::cout << "File successfully closed!\n";
 }
 
 void JSONParser::constructJSON() const {
@@ -97,6 +96,7 @@ void JSONParser::close() {
 	else {
 		clearData();
 	}
+	std::cout << "File successfully closed!\n";
 }
 
 void JSONParser::save(bool prettyPrint) {

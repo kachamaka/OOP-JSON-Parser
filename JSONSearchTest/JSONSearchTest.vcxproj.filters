@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="JSONObjectTest.cpp">
+    <ClCompile Include="JSONSearchTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\JSON Parser\JSONObject.cpp">
@@ -24,7 +24,16 @@
     <ClCompile Include="..\JSON Parser\JSONProperty.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\JSON Parser\JSONSearch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\JSON Parser\Helpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\JSON Parser\JSON.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\JSON Parser\JSONStructure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

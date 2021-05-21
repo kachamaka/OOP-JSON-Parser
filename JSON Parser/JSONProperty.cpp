@@ -1,7 +1,7 @@
-#include "JSONProperty.h"
-#include "Helpers.h"
-
 #include <iostream>
+
+#include "Helpers.h"
+#include "JSONProperty.h"
 
 JSONProperty::JSONProperty(String key, String value): key(key), value(value) {
 	if (isJSONString(value)) {
@@ -55,10 +55,6 @@ String JSONProperty::getPropertyString() const {
 		}
 	}
 	return propStr;
-}
-
-void JSONProperty::setParrent(JSONObject* newParrent) {
-	parrentPtr = newParrent;
 }
 
 void JSONProperty::setChild(JSONObject* newChild) {

@@ -33,8 +33,5 @@
     <ClCompile Include="..\JSON Parser\JSONStructure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\JSON Parser\JSONSearch.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

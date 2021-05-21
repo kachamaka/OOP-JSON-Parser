@@ -312,7 +312,6 @@ void JSON::createProperty(const Vector<Pair<String, String>>& keys, const Pair<V
 								}
 								else if (pos == currentObj->size()) {
 									JSONProperty* newProp = new JSONProperty("", "");
-									newProp->setParrent(currentObj);
 									if (value.first == ValueType::obj || value.first == ValueType::arr) {
 										JSONObject* newObj = new JSONObject(value.second);
 										newProp->setChild(newObj);

@@ -22,7 +22,7 @@ class JSONObject {
 
 	static Size_T getClosingCharPos(const String& raw, Size_T startPos, char openChar = '{', char closeChar = '}');
 public:
-	JSONObject(const String& objData);
+	JSONObject(const String& objData = "{}");
 
 	const ObjectType& type() const;
 

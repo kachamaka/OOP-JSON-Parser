@@ -139,6 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\JSON Parser\Helpers.cpp" />
+    <ClCompile Include="..\JSON Parser\JSONObject.cpp" />
+    <ClCompile Include="..\JSON Parser\JSONProperty.cpp" />
     <ClCompile Include="JSONObjectTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

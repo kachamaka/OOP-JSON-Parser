@@ -24,8 +24,6 @@ public:
 
 	String getPropertyString() const;
 
-	void setParrent(JSONObject*);
-
 	void setChild(JSONObject*);
 	JSONObject* getChild() const;
 	void deleteChild();

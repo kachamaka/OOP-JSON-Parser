@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{277f8c01-39c2-42cf-97ed-8ad7c4d6c35b}</ProjectGuid>
-    <RootNamespace>JSONTest</RootNamespace>
+    <ProjectGuid>{5677b2d2-ebd3-4cc5-b171-bfc1b23b1e09}</ProjectGuid>
+    <RootNamespace>JSONSearchTest</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -143,8 +143,9 @@
     <ClCompile Include="..\JSON Parser\JSON.cpp" />
     <ClCompile Include="..\JSON Parser\JSONObject.cpp" />
     <ClCompile Include="..\JSON Parser\JSONProperty.cpp" />
+    <ClCompile Include="..\JSON Parser\JSONSearch.cpp" />
     <ClCompile Include="..\JSON Parser\JSONStructure.cpp" />
-    <ClCompile Include="JSONTest.cpp" />
+    <ClCompile Include="JSONSearchTest.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
