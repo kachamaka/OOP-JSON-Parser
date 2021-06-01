@@ -1,8 +1,6 @@
 {
-  "ID": {
-    "ivan": "peta}r",
-    "go6o": 42,
-    "test": {}
+  "pesho": {
+    "da": "da"
   },
   "version": 42,
   "test:key with some:keys": false,
@@ -48,6 +46,5 @@
     "b": {
       "c": "ivan"
     }
-  },
-  "pesho": {"da":"da"}
+  }
 }

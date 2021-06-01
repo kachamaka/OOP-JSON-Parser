@@ -122,18 +122,18 @@ void JSONParser::print(bool prettyPrint) {
 	json.print(prettyPrint);
 }
 
-//void JSONParser::validate() {
-//	checkLoaded();
-//
-//	try {
-//		jsonRawData.validate();
-//	}
-//	catch (...) {
-//		clearData();
-//		throw;
-//	}
-//	//std::cout << "Valid JSON!\n";
-//}
+void JSONParser::validate() {
+	checkLoaded();
+
+	try {
+		jsonRawData.validate();
+	}
+	catch (...) {
+		clearData();
+		throw;
+	}
+	//std::cout << "Valid JSON!\n";
+}
 
 void JSONParser::search(const String& key) const {
 	checkLoaded();
