@@ -1,0 +1,156 @@
+\hypertarget{class_j_s_o_n_search}{}\doxysection{JSONSearch Class Reference}
+\label{class_j_s_o_n_search}\index{JSONSearch@{JSONSearch}}
+
+
+Class for the \mbox{\hyperlink{class_j_s_o_n}{JSON}} search results.  
+
+
+
+
+{\ttfamily \#include $<$JSONSearch.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_j_s_o_n_search_a8bbc27f0f44fb0bba923adac3226b87c}\label{class_j_s_o_n_search_a8bbc27f0f44fb0bba923adac3226b87c}} 
+{\bfseries JSONSearch} (const \mbox{\hyperlink{class_j_s_o_n_search}{JSONSearch}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_j_s_o_n_search_a2d6e0d9880b8e8df15d2161bf0fbf51d}\label{class_j_s_o_n_search_a2d6e0d9880b8e8df15d2161bf0fbf51d}} 
+\mbox{\hyperlink{class_j_s_o_n_search}{JSONSearch}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_j_s_o_n_search}{JSONSearch}} \&)=delete
+\item 
+String \mbox{\hyperlink{class_j_s_o_n_search_ab9951966dce6a0f183bf3511cca96bf6}{get\+Search\+String}} () const
+\begin{DoxyCompactList}\small\item\em Gets search result in raw string. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_j_s_o_n_search_a2019694c315e52442d2365a68504856c}{get\+Pretty\+Search\+String}} () const
+\begin{DoxyCompactList}\small\item\em Gets search result in a more readable version. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_search_a6bace7068efaa86709b6ad8fe620a376}{search}} (const String \&key)
+\begin{DoxyCompactList}\small\item\em Searches for properties with specified key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_j_s_o_n_search_a12e1fb6a8116b6757c4ff1a1105c3000}\label{class_j_s_o_n_search_a12e1fb6a8116b6757c4ff1a1105c3000}} 
+void \mbox{\hyperlink{class_j_s_o_n_search_a12e1fb6a8116b6757c4ff1a1105c3000}{print}} () const
+\begin{DoxyCompactList}\small\item\em Prints search result. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_search_a0d5cf3b4cd2105ea423eaa6273617eee}{print}} (Size\+\_\+T pos) const
+\begin{DoxyCompactList}\small\item\em Prints property on specified position from the search result data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_search_a5aea8620be37174d15cd245c66f463cf}{save}} (const String \&path) const
+\begin{DoxyCompactList}\small\item\em Saves search result to specified path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_search_a80589083bf9d2540d9fb6d66e9062822}{save}} (Size\+\_\+T pos, const String \&path) const
+\begin{DoxyCompactList}\small\item\em Saves property on specified position from the search result data to specified path. \end{DoxyCompactList}\item 
+Size\+\_\+T \mbox{\hyperlink{class_j_s_o_n_search_adce1e600eace2380b1d32f54cd2df8dc}{size}} () const
+\begin{DoxyCompactList}\small\item\em Gets number of properties found after search. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_j_s_o_n_search_a47fd93655e52b71ec614b8db9ced8e65}\label{class_j_s_o_n_search_a47fd93655e52b71ec614b8db9ced8e65}} 
+static \mbox{\hyperlink{class_j_s_o_n_search}{JSONSearch}} \& {\bfseries Get} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for the \mbox{\hyperlink{class_j_s_o_n}{JSON}} search results. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_s_o_n_search_a2019694c315e52442d2365a68504856c}\label{class_j_s_o_n_search_a2019694c315e52442d2365a68504856c}} 
+\index{JSONSearch@{JSONSearch}!getPrettySearchString@{getPrettySearchString}}
+\index{getPrettySearchString@{getPrettySearchString}!JSONSearch@{JSONSearch}}
+\doxysubsubsection{\texorpdfstring{getPrettySearchString()}{getPrettySearchString()}}
+{\footnotesize\ttfamily String JSONSearch\+::get\+Pretty\+Search\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets search result in a more readable version. 
+
+\begin{DoxyReturn}{Returns}
+Search result in a readable version 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_s_o_n_search_ab9951966dce6a0f183bf3511cca96bf6}\label{class_j_s_o_n_search_ab9951966dce6a0f183bf3511cca96bf6}} 
+\index{JSONSearch@{JSONSearch}!getSearchString@{getSearchString}}
+\index{getSearchString@{getSearchString}!JSONSearch@{JSONSearch}}
+\doxysubsubsection{\texorpdfstring{getSearchString()}{getSearchString()}}
+{\footnotesize\ttfamily String JSONSearch\+::get\+Search\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets search result in raw string. 
+
+\begin{DoxyReturn}{Returns}
+Raw string of the result of the search 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_s_o_n_search_a0d5cf3b4cd2105ea423eaa6273617eee}\label{class_j_s_o_n_search_a0d5cf3b4cd2105ea423eaa6273617eee}} 
+\index{JSONSearch@{JSONSearch}!print@{print}}
+\index{print@{print}!JSONSearch@{JSONSearch}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void JSONSearch\+::print (\begin{DoxyParamCaption}\item[{Size\+\_\+T}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+Prints property on specified position from the search result data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & -\/ Position of desired property \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_search_a5aea8620be37174d15cd245c66f463cf}\label{class_j_s_o_n_search_a5aea8620be37174d15cd245c66f463cf}} 
+\index{JSONSearch@{JSONSearch}!save@{save}}
+\index{save@{save}!JSONSearch@{JSONSearch}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void JSONSearch\+::save (\begin{DoxyParamCaption}\item[{const String \&}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Saves search result to specified path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ Path to file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_search_a80589083bf9d2540d9fb6d66e9062822}\label{class_j_s_o_n_search_a80589083bf9d2540d9fb6d66e9062822}} 
+\index{JSONSearch@{JSONSearch}!save@{save}}
+\index{save@{save}!JSONSearch@{JSONSearch}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void JSONSearch\+::save (\begin{DoxyParamCaption}\item[{Size\+\_\+T}]{pos,  }\item[{const String \&}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Saves property on specified position from the search result data to specified path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & -\/ Position of desired property \\
+\hline
+{\em path} & -\/ Path to file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_search_a6bace7068efaa86709b6ad8fe620a376}\label{class_j_s_o_n_search_a6bace7068efaa86709b6ad8fe620a376}} 
+\index{JSONSearch@{JSONSearch}!search@{search}}
+\index{search@{search}!JSONSearch@{JSONSearch}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily void JSONSearch\+::search (\begin{DoxyParamCaption}\item[{const String \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Searches for properties with specified key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ Key of desired properties \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_search_adce1e600eace2380b1d32f54cd2df8dc}\label{class_j_s_o_n_search_adce1e600eace2380b1d32f54cd2df8dc}} 
+\index{JSONSearch@{JSONSearch}!size@{size}}
+\index{size@{size}!JSONSearch@{JSONSearch}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily Size\+\_\+T JSONSearch\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets number of properties found after search. 
+
+\begin{DoxyReturn}{Returns}
+Number of properties found 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+JSONSearch.\+h\item 
+JSONSearch.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,183 @@
+\hypertarget{class_j_s_o_n}{}\doxysection{JSON Class Reference}
+\label{class_j_s_o_n}\index{JSON@{JSON}}
+
+
+Class for the initial \mbox{\hyperlink{class_j_s_o_n}{JSON}} object.  
+
+
+
+
+{\ttfamily \#include $<$JSON.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_j_s_o_n_a498414c7c0036b2278d1b4abbdc9ac82}\label{class_j_s_o_n_a498414c7c0036b2278d1b4abbdc9ac82}} 
+{\bfseries JSON} (const \mbox{\hyperlink{class_j_s_o_n}{JSON}} \&)=delete
+\item 
+\mbox{\Hypertarget{class_j_s_o_n_a236d39dbc82675e83bbe6d11b4751089}\label{class_j_s_o_n_a236d39dbc82675e83bbe6d11b4751089}} 
+\mbox{\hyperlink{class_j_s_o_n}{JSON}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_j_s_o_n}{JSON}} \&)=delete
+\item 
+void \mbox{\hyperlink{class_j_s_o_n_a09f1ec942c771eea08a35459c608db5b}{construct}} (const String \&raw=\char`\"{}\{\}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructs \mbox{\hyperlink{class_j_s_o_n}{JSON}} object with raw data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_ad9dc0d5fb08879b6e53d9e5ef9a94f10}{print}} (bool pretty\+Print=true) const
+\begin{DoxyCompactList}\small\item\em Prints \mbox{\hyperlink{class_j_s_o_n}{JSON}} contents. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_adbc92f3169189be3838908454fe0c167}{save}} (const String \&path, bool pretty\+Print=true) const
+\begin{DoxyCompactList}\small\item\em Saves \mbox{\hyperlink{class_j_s_o_n}{JSON}} data to path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_a02d0f440aff28a0a182ae786cdf91ca4}{set}} (const String \&key, Pair$<$ Value\+Type, String $>$ value) const
+\begin{DoxyCompactList}\small\item\em Sets value to a key. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_a9f4a5e97b62c8f2ef6558b04a40473b6}{create}} (const String \&key, Pair$<$ Value\+Type, String $>$ value) const
+\begin{DoxyCompactList}\small\item\em Creates property with key from the key path and value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_ae09bb9a6fd5985049adbf4fb1f7a4239}{remove}} (const String \&key) const
+\begin{DoxyCompactList}\small\item\em Removes property with corresponding key path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_a3cdb6a751346de6fea425e7eb6951a49}{move}} (const String \&key1, const String \&key2) const
+\begin{DoxyCompactList}\small\item\em Moves property data from key1 to key2. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_j_s_o_n_aee7f0e7cfe712ec7d3169121782142ac}\label{class_j_s_o_n_aee7f0e7cfe712ec7d3169121782142ac}} 
+void \mbox{\hyperlink{class_j_s_o_n_aee7f0e7cfe712ec7d3169121782142ac}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Deletes all \mbox{\hyperlink{class_j_s_o_n}{JSON}} objects/properties and their childs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_j_s_o_n_object}{JSONObject}} $\ast$ \mbox{\hyperlink{class_j_s_o_n_aea182ded4306686fe66d9daf2dcf34ae}{get\+JSON}} () const
+\begin{DoxyCompactList}\small\item\em Gets main \mbox{\hyperlink{class_j_s_o_n}{JSON}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_j_s_o_n_ae9824e2ee182ce27771d121373a83d39}\label{class_j_s_o_n_ae9824e2ee182ce27771d121373a83d39}} 
+static \mbox{\hyperlink{class_j_s_o_n}{JSON}} \& {\bfseries Get} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for the initial \mbox{\hyperlink{class_j_s_o_n}{JSON}} object. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_s_o_n_a09f1ec942c771eea08a35459c608db5b}\label{class_j_s_o_n_a09f1ec942c771eea08a35459c608db5b}} 
+\index{JSON@{JSON}!construct@{construct}}
+\index{construct@{construct}!JSON@{JSON}}
+\doxysubsubsection{\texorpdfstring{construct()}{construct()}}
+{\footnotesize\ttfamily void JSON\+::construct (\begin{DoxyParamCaption}\item[{const String \&}]{raw = {\ttfamily \char`\"{}\{\}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructs \mbox{\hyperlink{class_j_s_o_n}{JSON}} object with raw data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw} & -\/ Raw \mbox{\hyperlink{class_j_s_o_n}{JSON}} data \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_a9f4a5e97b62c8f2ef6558b04a40473b6}\label{class_j_s_o_n_a9f4a5e97b62c8f2ef6558b04a40473b6}} 
+\index{JSON@{JSON}!create@{create}}
+\index{create@{create}!JSON@{JSON}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily void JSON\+::create (\begin{DoxyParamCaption}\item[{const String \&}]{key,  }\item[{Pair$<$ Value\+Type, String $>$}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Creates property with key from the key path and value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ Path to key \\
+\hline
+{\em value} & -\/ Value for the new property \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_aea182ded4306686fe66d9daf2dcf34ae}\label{class_j_s_o_n_aea182ded4306686fe66d9daf2dcf34ae}} 
+\index{JSON@{JSON}!getJSON@{getJSON}}
+\index{getJSON@{getJSON}!JSON@{JSON}}
+\doxysubsubsection{\texorpdfstring{getJSON()}{getJSON()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_s_o_n_object}{JSONObject}} $\ast$ JSON\+::get\+JSON (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets main \mbox{\hyperlink{class_j_s_o_n}{JSON}} object. 
+
+\begin{DoxyReturn}{Returns}
+Main \mbox{\hyperlink{class_j_s_o_n}{JSON}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_s_o_n_a3cdb6a751346de6fea425e7eb6951a49}\label{class_j_s_o_n_a3cdb6a751346de6fea425e7eb6951a49}} 
+\index{JSON@{JSON}!move@{move}}
+\index{move@{move}!JSON@{JSON}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void JSON\+::move (\begin{DoxyParamCaption}\item[{const String \&}]{key1,  }\item[{const String \&}]{key2 }\end{DoxyParamCaption}) const}
+
+
+
+Moves property data from key1 to key2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key1} & -\/ Source path to property \\
+\hline
+{\em key2} & -\/ Destination path to property \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_ad9dc0d5fb08879b6e53d9e5ef9a94f10}\label{class_j_s_o_n_ad9dc0d5fb08879b6e53d9e5ef9a94f10}} 
+\index{JSON@{JSON}!print@{print}}
+\index{print@{print}!JSON@{JSON}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void JSON\+::print (\begin{DoxyParamCaption}\item[{bool}]{pretty\+Print = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+
+
+Prints \mbox{\hyperlink{class_j_s_o_n}{JSON}} contents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pretty\+Print} & -\/ Option for pretty \mbox{\hyperlink{class_j_s_o_n}{JSON}} string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_ae09bb9a6fd5985049adbf4fb1f7a4239}\label{class_j_s_o_n_ae09bb9a6fd5985049adbf4fb1f7a4239}} 
+\index{JSON@{JSON}!remove@{remove}}
+\index{remove@{remove}!JSON@{JSON}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void JSON\+::remove (\begin{DoxyParamCaption}\item[{const String \&}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Removes property with corresponding key path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ Path to key \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_adbc92f3169189be3838908454fe0c167}\label{class_j_s_o_n_adbc92f3169189be3838908454fe0c167}} 
+\index{JSON@{JSON}!save@{save}}
+\index{save@{save}!JSON@{JSON}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void JSON\+::save (\begin{DoxyParamCaption}\item[{const String \&}]{path,  }\item[{bool}]{pretty\+Print = {\ttfamily true} }\end{DoxyParamCaption}) const}
+
+
+
+Saves \mbox{\hyperlink{class_j_s_o_n}{JSON}} data to path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & -\/ Path of the new .json file \\
+\hline
+{\em pretty\+Print} & -\/ Option for pretty \mbox{\hyperlink{class_j_s_o_n}{JSON}} string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_a02d0f440aff28a0a182ae786cdf91ca4}\label{class_j_s_o_n_a02d0f440aff28a0a182ae786cdf91ca4}} 
+\index{JSON@{JSON}!set@{set}}
+\index{set@{set}!JSON@{JSON}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void JSON\+::set (\begin{DoxyParamCaption}\item[{const String \&}]{key,  }\item[{Pair$<$ Value\+Type, String $>$}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Sets value to a key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & -\/ Path to key \\
+\hline
+{\em value} & -\/ New value for the property with corresponding key \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+JSON.\+h\item 
+JSON.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,163 @@
+\hypertarget{class_j_s_o_n_object}{}\doxysection{JSONObject Class Reference}
+\label{class_j_s_o_n_object}\index{JSONObject@{JSONObject}}
+
+
+Class for \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object.  
+
+
+
+
+{\ttfamily \#include $<$JSONObject.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_j_s_o_n_object_a1b638ac12afe077f73b957abb481f1e7}{JSONObject}} (const String \&obj\+Data=\char`\"{}\{\}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object with raw \mbox{\hyperlink{class_j_s_o_n}{JSON}} data. \end{DoxyCompactList}\item 
+const Object\+Type \& \mbox{\hyperlink{class_j_s_o_n_object_a5cdf1e6777802ab3f3214844cbd624ae}{type}} () const
+\begin{DoxyCompactList}\small\item\em Gets object type. \end{DoxyCompactList}\item 
+Size\+\_\+T \mbox{\hyperlink{class_j_s_o_n_object_a877fae49956b121eb0e7af11c41d67eb}{size}} () const
+\begin{DoxyCompactList}\small\item\em Gets number of properties an object has. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_j_s_o_n_object_ae7bd992d0bfd797e5afd4f0733608e7b}{get\+Object\+String}} () const
+\begin{DoxyCompactList}\small\item\em Parses \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object with its properties to \mbox{\hyperlink{class_j_s_o_n}{JSON}} raw string. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_j_s_o_n_object_a74f62893a2eed248d48de2e1f5a14e45}{get\+Pretty\+Object\+String}} () const
+\begin{DoxyCompactList}\small\item\em Parses \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object string and formats it to a more readable version. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_object_a7dba25a04f7003571ebc1599d4fdfc19}{add\+Property}} (\mbox{\hyperlink{class_j_s_o_n_property}{JSONProperty}} $\ast$prop)
+\begin{DoxyCompactList}\small\item\em Adds property to \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_j_s_o_n_object_a325c7f4c479ca6163d898046c4afe1ee}{remove\+Property}} (\mbox{\hyperlink{class_j_s_o_n_property}{JSONProperty}} $\ast$prop)
+\begin{DoxyCompactList}\small\item\em Removes property and its contents. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_j_s_o_n_object_a3a7568f081c94445a31c6dd1d16f3817}\label{class_j_s_o_n_object_a3a7568f081c94445a31c6dd1d16f3817}} 
+void \mbox{\hyperlink{class_j_s_o_n_object_a3a7568f081c94445a31c6dd1d16f3817}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Delete all of current object\textquotesingle{}s properties. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_j_s_o_n_property}{JSONProperty}} $\ast$ \mbox{\hyperlink{class_j_s_o_n_object_af7534c9b03ed2fb38597294c5cb2554b}{operator\mbox{[}$\,$\mbox{]}}} (Size\+\_\+T pos)
+\begin{DoxyCompactList}\small\item\em Indexes current object\textquotesingle{}s properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_j_s_o_n_object_a1b638ac12afe077f73b957abb481f1e7}\label{class_j_s_o_n_object_a1b638ac12afe077f73b957abb481f1e7}} 
+\index{JSONObject@{JSONObject}!JSONObject@{JSONObject}}
+\index{JSONObject@{JSONObject}!JSONObject@{JSONObject}}
+\doxysubsubsection{\texorpdfstring{JSONObject()}{JSONObject()}}
+{\footnotesize\ttfamily JSONObject\+::\+JSONObject (\begin{DoxyParamCaption}\item[{const String \&}]{obj\+Data = {\ttfamily \char`\"{}\{\}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object with raw \mbox{\hyperlink{class_j_s_o_n}{JSON}} data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+Data} & -\/ Raw \mbox{\hyperlink{class_j_s_o_n}{JSON}} data \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_j_s_o_n_object_a7dba25a04f7003571ebc1599d4fdfc19}\label{class_j_s_o_n_object_a7dba25a04f7003571ebc1599d4fdfc19}} 
+\index{JSONObject@{JSONObject}!addProperty@{addProperty}}
+\index{addProperty@{addProperty}!JSONObject@{JSONObject}}
+\doxysubsubsection{\texorpdfstring{addProperty()}{addProperty()}}
+{\footnotesize\ttfamily void JSONObject\+::add\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_s_o_n_property}{JSONProperty}} $\ast$}]{prop }\end{DoxyParamCaption})}
+
+
+
+Adds property to \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & -\/ Pointer to property to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_object_ae7bd992d0bfd797e5afd4f0733608e7b}\label{class_j_s_o_n_object_ae7bd992d0bfd797e5afd4f0733608e7b}} 
+\index{JSONObject@{JSONObject}!getObjectString@{getObjectString}}
+\index{getObjectString@{getObjectString}!JSONObject@{JSONObject}}
+\doxysubsubsection{\texorpdfstring{getObjectString()}{getObjectString()}}
+{\footnotesize\ttfamily String JSONObject\+::get\+Object\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Parses \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object with its properties to \mbox{\hyperlink{class_j_s_o_n}{JSON}} raw string. 
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_j_s_o_n}{JSON}} raw string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_s_o_n_object_a74f62893a2eed248d48de2e1f5a14e45}\label{class_j_s_o_n_object_a74f62893a2eed248d48de2e1f5a14e45}} 
+\index{JSONObject@{JSONObject}!getPrettyObjectString@{getPrettyObjectString}}
+\index{getPrettyObjectString@{getPrettyObjectString}!JSONObject@{JSONObject}}
+\doxysubsubsection{\texorpdfstring{getPrettyObjectString()}{getPrettyObjectString()}}
+{\footnotesize\ttfamily String JSONObject\+::get\+Pretty\+Object\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Parses \mbox{\hyperlink{class_j_s_o_n}{JSON}} Object string and formats it to a more readable version. 
+
+\begin{DoxyReturn}{Returns}
+pretty \mbox{\hyperlink{class_j_s_o_n}{JSON}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_s_o_n_object_af7534c9b03ed2fb38597294c5cb2554b}\label{class_j_s_o_n_object_af7534c9b03ed2fb38597294c5cb2554b}} 
+\index{JSONObject@{JSONObject}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!JSONObject@{JSONObject}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_j_s_o_n_property}{JSONProperty}} $\ast$ JSONObject\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{Size\+\_\+T}]{pos }\end{DoxyParamCaption})}
+
+
+
+Indexes current object\textquotesingle{}s properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & -\/ Position of property \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the property on the desired position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_s_o_n_object_a325c7f4c479ca6163d898046c4afe1ee}\label{class_j_s_o_n_object_a325c7f4c479ca6163d898046c4afe1ee}} 
+\index{JSONObject@{JSONObject}!removeProperty@{removeProperty}}
+\index{removeProperty@{removeProperty}!JSONObject@{JSONObject}}
+\doxysubsubsection{\texorpdfstring{removeProperty()}{removeProperty()}}
+{\footnotesize\ttfamily void JSONObject\+::remove\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_j_s_o_n_property}{JSONProperty}} $\ast$}]{prop }\end{DoxyParamCaption})}
+
+
+
+Removes property and its contents. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & -\/ Pointer to property to be removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_j_s_o_n_object_a877fae49956b121eb0e7af11c41d67eb}\label{class_j_s_o_n_object_a877fae49956b121eb0e7af11c41d67eb}} 
+\index{JSONObject@{JSONObject}!size@{size}}
+\index{size@{size}!JSONObject@{JSONObject}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily Size\+\_\+T JSONObject\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets number of properties an object has. 
+
+\begin{DoxyReturn}{Returns}
+Number of properties 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_j_s_o_n_object_a5cdf1e6777802ab3f3214844cbd624ae}\label{class_j_s_o_n_object_a5cdf1e6777802ab3f3214844cbd624ae}} 
+\index{JSONObject@{JSONObject}!type@{type}}
+\index{type@{type}!JSONObject@{JSONObject}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily const Object\+Type \& JSONObject\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets object type. 
+
+\begin{DoxyReturn}{Returns}
+Object type 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+JSONObject.\+h\item 
+JSONObject.\+cpp\end{DoxyCompactItemize}
