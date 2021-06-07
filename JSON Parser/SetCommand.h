@@ -2,6 +2,7 @@
 
 #include "Command.h"
 
+/// @brief Command child class for the set command
 class SetCommand : protected Command {
 
 public:

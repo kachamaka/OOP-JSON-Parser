@@ -2,6 +2,7 @@
 
 #include "Command.h"
 
+/// @brief Command child class for the search command
 class SearchCommand : protected Command {
 
 public:

@@ -2,6 +2,7 @@
 
 #include "Command.h"
 
+/// @brief Command child class for the remove command
 class RemoveCommand : protected Command {
 
 public:

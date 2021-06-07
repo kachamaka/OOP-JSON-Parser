@@ -260,6 +260,10 @@ void JSONObject::removeProperty(JSONProperty* prop) {
 	for (Size_T i = 0; i < properties.size(); i++) {
 		if (properties[i] == prop) {
 			properties[i] = properties[size() - 1];
+			if (prop->getChild() != nullptr) {
+				prop->getChild()->clear();
+				delete prop->getChild();
+			}
 			delete prop;
 			properties.pop_back();
 			break;

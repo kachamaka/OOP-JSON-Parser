@@ -22,7 +22,6 @@ void JSON::clear() {
 		delete jsonObj;
 	}
 
-	//maybe unneccessary
 	jsonObj = nullptr;
 }
 
@@ -77,7 +76,6 @@ void JSON::set(const String& key, Pair<ValueType, String> value) const {
 		throw invalidPathToKey;
 	}
 	else {
-		//std::cout << currentProp->getKey() << "<->" << currentProp->getValue() << "\n";
 		if (value.first == ValueType::obj || value.first == ValueType::arr) {
 			JSONObject* newObj = new JSONObject(value.second);
 			currentProp->setValue("");
@@ -319,7 +317,6 @@ void JSON::createProperty(const Vector<Pair<String, String>>& keys, const Pair<V
 										newProp->setValue(value.second);
 									}
 									currentObj->addProperty(newProp);
-									//std::cout << newProp->getKey() << " " << newProp->getValue() << " ??\n";
 									return;
 								}
 								else {

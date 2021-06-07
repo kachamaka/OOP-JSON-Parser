@@ -2,6 +2,7 @@
 
 #include "Command.h"
 
+/// @brief Command child class for the move command
 class MoveCommand : protected Command {
 
 public:

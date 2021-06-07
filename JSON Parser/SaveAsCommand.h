@@ -2,6 +2,7 @@
 
 #include "Command.h"
 
+/// @brief Command child class for the saveas command
 class SaveAsCommand : protected Command {
 
 public:

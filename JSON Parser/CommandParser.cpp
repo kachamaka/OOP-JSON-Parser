@@ -23,12 +23,6 @@ void CommandParser::parse(String line) {
 
 	parseArgments(line);
 
-	//---------------------------------- print args -- test fnc -> delete later
-	//for (std::size_t i = 0; i < arguments.size(); i++) {
-	//	std::cout << "Arg " << i << " -> " << getTypeToString(arguments[i].first) << " : " << arguments[i].second << std::endl;
-	//}
-	//-----------------------------------
-
 	command = toLower(arguments[0].second);
 
 	try {
@@ -66,9 +60,6 @@ void CommandParser::executeCommand() {
 		CloseCommand close;
 		close.exec();
 	}
-	//else if (command == "validate") {
-	//	jsonParser.validate();
-	//}
 	else if (command == "new") {
 		NewCommand newCmd;
 		newCmd.exec();

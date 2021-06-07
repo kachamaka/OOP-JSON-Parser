@@ -4,6 +4,9 @@
 #include "Core.h"
 #include "CommandParser.h"
 
+#include "CloseCommand.h"
+
+
 
 void Core::start() {
 	CommandParser parser;
@@ -12,7 +15,8 @@ void Core::start() {
 		try {
 			parser.parse(line);
 			if (parser.isExit()) {
-				//close json and save???
+				CloseCommand close;
+				close.exec();
 				return;
 			}
 		}

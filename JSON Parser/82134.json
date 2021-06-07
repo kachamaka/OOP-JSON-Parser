@@ -1,0 +1,11 @@
+{
+  "ID": 42,
+  "name": "Martin",
+  "age": 20,
+  "subjects": [
+    "Geometry",
+    "Calc 2",
+    "OOP",
+    "Automata theory"
+  ]
+}

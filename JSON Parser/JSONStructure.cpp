@@ -20,19 +20,9 @@ void JSONStructure::addLine(String str) {
 	rawData += str;
 }
 
-void JSONStructure::print(bool prettyPrint = false) {
-	if (prettyPrint) {
-		std::cout << formatPretty(rawData) << "\n";
-	}
-	else {
-		std::cout << rawData << "\n";
-	}
-}
-
 void JSONStructure::validateValue(const String& value) {
 	if (!isJSONString(value)) {
 		if (!isNumber(value) && !isJSON3ValuedLogic(value)) {
-			//std::cout << value << " -> WHAT IS DIS?\n";
 			String errorMsg = "Invalid JSON: Invalid value near: ";
 			errorMsg += value;
 			throw std::invalid_argument(errorMsg);
@@ -58,7 +48,6 @@ void JSONStructure::validateKeyValue(Size_T start, Size_T end, bool objectValue)
 		else {
 			String key = keyWithValue.substr(0, middle);
 			String value = keyWithValue.substr(middle + 1);
-			//std::cout << key << " " << value << "\n";
 
 			validateValue(value);
 			validateKey(key);
@@ -178,7 +167,6 @@ Size_T JSONStructure::validateJSON(
 		}
 		else {
 			if (i == rawData.size() - 1) {
-				//std::cout << rawData << "\n";
 				String errorMsg = "Invalid JSON: No closing quotes near: ";
 				errorMsg += rawData.substr(start, i + 1 - start);
 				throw std::invalid_argument(errorMsg);

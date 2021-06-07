@@ -2,6 +2,8 @@
 
 #include <stdexcept>
 
+///@brief customized exception directives
+
 #define invalidInput \
 std::invalid_argument("Please enter valid input...");
 

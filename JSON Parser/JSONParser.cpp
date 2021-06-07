@@ -132,7 +132,6 @@ void JSONParser::validate() {
 		clearData();
 		throw;
 	}
-	//std::cout << "Valid JSON!\n";
 }
 
 void JSONParser::search(const String& key) const {

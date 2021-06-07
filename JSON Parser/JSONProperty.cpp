@@ -66,9 +66,6 @@ void JSONProperty::setChild(JSONObject* newChild) {
 	childPtr = newChild;
 }
 
-//void JSONProperty::setAssociatedType(Type t) {
-//	associatedType = t;
-//}
 ValueType JSONProperty::getAssociatedType() {
 	return associatedType;
 }
