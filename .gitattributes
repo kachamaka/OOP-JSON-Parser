@@ -1,2 +1,2 @@
-"./JSON Parser/html/*" export-ignore
-"./JSON Parser/latex/*" export-ignore
+./JSON Parser/html/* export-ignore
+./JSON Parser/latex/* export-ignore
