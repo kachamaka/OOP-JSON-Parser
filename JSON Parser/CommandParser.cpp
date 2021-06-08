@@ -129,26 +129,26 @@ void CommandParser::clearConsole() {
 }
 
 void CommandParser::printCommands() {
-	std::cout << "open <path> - Open existing file\n";
-	std::cout << "close - Close currently loaded file\n";
-	std::cout << "save <pretty|raw> - Save already existing file\n";
-	std::cout << "save search <path> - Save search result\n";
-	std::cout << "save search <position> <path> - Save search element result\n";
-	std::cout << "saveas <name> <pretty|raw> - Save as new file\n";
-	std::cout << "new - Create an empty instance\n";
+	std::cout << "open <path> - Opens existing file\n";
+	std::cout << "close - Closes currently loaded file\n";
+	std::cout << "save <pretty|raw> - Saves already existing file with optional format [default is pretty]\n";
+	std::cout << "save search <path> - Saves search result\n";
+	std::cout << "save search <position> <path> - Saves element from search result on specified position\n";
+	std::cout << "saveas <path> <pretty|raw> - Saves as new file\n";
+	std::cout << "new - Creates a new instance with an empty base\n";
 
-	std::cout << "print <pretty|raw> - Print contents\n";
-	std::cout << "print search - Print searched contents\n";
-	std::cout << "print search <position> - Print element from searched contents\n";
-	std::cout << "search <key> - Search by key\n";
-	//edit or set? 
-	std::cout << "set <key> <value> - Set value to a key [set $.key \"value\"]\n";
-	std::cout << "create <key> <value> - Create new key with value [create $.key \"value\"]\n";
-	std::cout << "remove <key> - Remove key with value [remove $.key]\n";
-	std::cout << "move <key1> <key2> - Move value from key1 to key2 [move $.key1 $.key2]\n";
+	std::cout << "print <pretty|raw> - Prints currently loaded JSON's contents with optional format [default is pretty]\n";
+	std::cout << "print search - Prints search contents\n";
+	std::cout << "print search <position> - Prints element from search result on specified position\n";
+	std::cout << "search <key> - Searches by key\n";
+	
+	std::cout << "set <key> <value> - Sets value to property with specified key [set $.path.to.key \"value\"]\n";
+	std::cout << "create <key> <value> - Creates new property with specified key and value [create $.path.to.key \"value\"]\n";
+	std::cout << "remove <key> - Removes property with specified key [remove $.path.to.key]\n";
+	std::cout << "move <key1> <key2> - Moves property's contents with key1 to property with key2 [move $.path.to.key1 $.path.to.key2]\n";
 
-	std::cout << "cls - Clear console\n";
-	std::cout << "exit - Exit\n";
+	std::cout << "cls - Clears console\n";
+	std::cout << "exit - Exits the program\n";
 }
 
 void CommandParser::validateInput(const String& input) {
