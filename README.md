@@ -1,4 +1,4 @@
-# OOP-JSON-Parser
+# OOP-JSON-Parser Project for the OOP 2020/2021 course
 
 ## Usage
 
