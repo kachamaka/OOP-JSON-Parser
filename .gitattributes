@@ -1,2 +1,2 @@
-"./JSON Parser/html/*" linguist-vendored
-"./JSON Parser/latex/*" linguist-vendored
+"./JSON Parser/html/*" export-ignore
+"./JSON Parser/latex/*" export-ignore
