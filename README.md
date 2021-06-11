@@ -26,5 +26,5 @@ exit - Exits the program <br>
 
 ## Note
 
-When specifying path to property with key, use the following syntax: $.path.to.key.
+When specifying path to property with specific key, use the following syntax: $.path.to.key
 - $ specifies root object
